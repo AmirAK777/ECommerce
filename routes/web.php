@@ -1,10 +1,10 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
-use App\Models\User;
-use Spatie\Permission\Models\Role;
+use App\Http\Controllers\CommandeController;
+
 use Illuminate\Support\Facades\Route;
-use Spatie\Permission\Models\Permission;
+
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 
@@ -30,6 +30,11 @@ Route::middleware('auth')->group(function () {
         Route::get('/products/{product}', [ProductController::class, 'destroy']);
         Route::resource('/categories', CategoryController::class);
         Route::get('/categories/{category}', [CategoryController::class, 'destroy']);
+        Route::get('/order/checkout', [CommandeController::class, 'show'])->name('contact.voir');
+        Route::get('/orders/list', [CommandeController::class, 'index'])->name('orders.list');
+        Route::get('/orders/{commande}/edit', [CommandeController::class, 'edit'])->name('orders.edit');
+        Route::put('/orderS/{commande}/update', [CommandeController::class, 'update'])->name('orders.update');
+        Route::get('/orderS/{commande}', [CommandeController::class, 'destroy'])->name('orders.destroy');
     });
 });
 
