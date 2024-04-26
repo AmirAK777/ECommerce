@@ -19,5 +19,10 @@
                 {{ __('messages.category_list') }}
             </x-side-nav-link>
         </div>
+        <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+            <x-side-nav-link :href="route('orders.list')" :active="request()->routeIs('orders.list')">
+                {{ __('messages.orders_list') }}
+            </x-side-nav-link>
+        </div>
     @endrole
 </div>

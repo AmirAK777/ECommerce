@@ -5,37 +5,36 @@
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="px-6 py-3">
-                    User ID
+                    {{ __('messages.user_id') }}
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Product name
+                    {{ __('messages.product_name') }}
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Order date
+                    {{ __('messages.order_date') }}
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Price
+                    {{ __('messages.price') }}
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Payment Status
+                    {{ __('messages.payment_status') }}
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Email
+                    {{ __('messages.email') }}
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Phone
+                    {{ __('messages.phone') }}
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    City
+                    {{ __('messages.city') }}
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Address
+                    {{ __('messages.address') }}
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Action
+                    {{ __('messages.action') }}
                 </th>
             </tr>
-
         </thead>
         <tbody>
             @forelse ($orders as $commande)
@@ -65,7 +64,7 @@
             </tr>
             @empty
             <tr>
-                <td colspan="11" class="text-center">Aucune commande trouvée</td>
+                <td colspan="11" class="text-center"> {{ __('messages.no_command_found') }}</td>
             </tr>
             @endforelse
         </tbody>

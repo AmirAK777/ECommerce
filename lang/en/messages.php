@@ -11,6 +11,7 @@ return [
     "price" => "Price",
     "image" => "Image",
     "edit" => "Update",
+    "action" => "Action",
     "product_name" => "Product Name",
     "category_name" => "Category Name",
     "details" => "Details",
@@ -22,6 +23,7 @@ return [
     "create" => "Create",
     "product_list" => "Product List",
     "category_list" => "Category List",
+    "orders_list" => "Orders List",
     "product_updated_success" => "Product updated successfully",
     "product_update_error" => "An error occurred while updating the product",
     "product_created_success" => "The product has been created successfully",
@@ -31,5 +33,16 @@ return [
     "category_update_error" => "An error occurred while updating the category",
     "category_created_success" => "The category has been created successfully",
     "category_create_error" => "An error occurred while creating the category",
-    "category_delete_success" => "Category deleted successfully"
+    "category_delete_success" => "Category deleted successfully",
+    "no_command_found" => "No orders found",
+    "edit_orders" => "Edit orders",
+    "user_id" => "User ID",
+    "order_date" => "Order Date",
+    "payment_status" => "Payment Status",
+    "email" => "Email",
+    "phone" => "Phone",
+    "city" => "City",
+    "address" => "Address",
+    
+
 ];

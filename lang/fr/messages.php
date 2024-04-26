@@ -10,6 +10,7 @@ return [
     "weight" => "Poids",
     "price" => "Prix",
     "edit" => "Modifier",
+    "action" => "Action",
     "product_name" => "Nom du produit",
     "category_name" => "Nom de la catégorie",
     "details" => "Détails",
@@ -22,6 +23,7 @@ return [
     "create" => "Créer",
     "product_list" => "Liste des produits",
     "category_list" => "Liste des catégories",
+    "orders_list" => "Liste des commandes",
     "product_updated_success" => "Produit mis à jour avec succès",
     "product_update_error" => "Une erreur est survenue lors de la mise à jour du produit",
     "product_created_success" => "Le produit a été créé avec succès",
@@ -31,5 +33,15 @@ return [
     "category_update_error" => "Une erreur est survenue lors de la mise à jour de la catégorie",
     "category_created_success" => "La catégorie a été créée avec succès",
     "category_create_error" => "Une erreur est survenue lors de la création de la catégorie",
-    "category_delete_success" => "La catégorie a été supprimée avec succès"
+    "category_delete_success" => "La catégorie a été supprimée avec succès",
+    "no_command_found" => "Aucune commande trouvée",
+    "edit_orders" => "Modifier les commandes",
+    "user_id" => "ID Utilisateur",
+    "order_date" => "Date de commande",
+    "payment_status" => "Statut de paiement",
+    "email" => "Email",
+    "phone" => "Téléphone",
+    "city" => "Ville",
+    "address" => "Adresse",
+
 ];
