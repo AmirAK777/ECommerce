@@ -18,6 +18,7 @@ return [
     "product_price" => "Product Price",
     "category" => "Category",
     "description" => "Description",
+    "stock" => "Stock",
     "weight" => "Weight",
     "image" => "Image",
     "create" => "Create",

@@ -47,6 +47,9 @@
                             <x-input-label for="description">{{ __('messages.description') }}</x-input-label>
                             <x-textarea-input id="description" :value="old('description')" />
 
+                            <x-input-label for="stock">{{ __('messages.stock') }}</x-input-label>
+                            <x-text-input id="stock" name="stock" :value="old('stock')" class="block mt-1 w-full" type="number" step="any" />
+
                             <x-input-label for="weight">{{ __('messages.weight') }}</x-input-label>
                             <x-text-input id="weight" name="weight" :value="old('weight')" class="block mt-1 w-full" type="number" step="any" />
 

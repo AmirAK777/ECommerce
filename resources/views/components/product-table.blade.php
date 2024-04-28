@@ -11,6 +11,9 @@
                 {{ __('messages.product') }}
                 </th>
                 <th scope="col" class="px-6 py-3">
+                {{ __('messages.stock') }}
+                </th>
+                <th scope="col" class="px-6 py-3">
                 {{ __('messages.weight') }}
                 </th>
                 <th scope="col" class="px-6 py-3">
@@ -30,6 +33,9 @@
                 </td>
                 <td class="px-6 py-4 font-semibold text-gray-900">
                     {{ $product['nom'] }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ $product['stock'] }}
                 </td>
                 <td class="px-6 py-4">
                     {{ $product['weight'] }} g

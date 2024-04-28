@@ -1,15 +1,19 @@
 <?php
 
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\CommandeController;
+use App\Models\User;
+use Spatie\Permission\Models\Role;
 
 use Illuminate\Support\Facades\Route;
-use App\Models\User;
+use App\Http\Controllers\HomeController;
 
+use App\Http\Controllers\ShopController;
+use Spatie\Permission\Models\Permission;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
-use Spatie\Permission\Models\Permission;
-use Spatie\Permission\Models\Role;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommandeController;
 
 Route::get('/', function () {
 
@@ -22,8 +26,10 @@ Route::get('/', function () {
     // $user = User::find(1); 
     // $user->assignRole('admin');
 
- return view('welcome');
+    return view('welcome');
 });
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/about', [AboutController::class, 'index'])->name('about.index');
 
 
 Route::middleware(['role:admin'])->name('dashboard')->get('/dashboard', function () {
@@ -51,6 +57,19 @@ Route::middleware('auth')->group(function () {
 });
 
 
+Route::get('/contact')->name('contact.voir');
+Route::get('/csontact')->name('blogs.show');
 
+Route::get('/shop', [ShopController::class, 'index'])->name('shop.index');
+Route::get('/shop/{category}', [ShopController::class, 'show'])->name('shop.show');
+Route::get('/item/{product}', [ShopController::class, 'showItem'])->name('shop.item');
+Route::get('add-to-cart/{id}', [ShopController::class, 'addToCart'])->name('add_to_cart');
+Route::get('/cart', [ShopController::class, 'showCart'])->name('cart.index');
+Route::get('/cart/remove/{id}', [ShopController::class, 'remove'])->name('cart.remove');
 
+Route::get('/search', [SearchController::class, 'search'])->name('search');
+
+Route::get('/ma-vue', function () {
+    return view('layouts.shop');
+});
 require __DIR__ . '/auth.php';

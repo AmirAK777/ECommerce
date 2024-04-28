@@ -35,6 +35,7 @@ class ProductController extends Controller
                 'price' => 'required',
                 'description' => 'required',
                 'details' => 'required',
+                'stock' => 'required',
                 'weight' => 'required',
                 'category_id' => 'required',
                 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -45,6 +46,7 @@ class ProductController extends Controller
             $product->price = $request->input('price');
             $product->description = $request->input('description');
             $product->details = $request->input('details');
+            $product->stock = $request->input('stock');
             $product->weight = $request->input('weight');
             $product->category_id = $request->input('category_id');
 
@@ -83,6 +85,7 @@ class ProductController extends Controller
                 'price' => 'required|numeric',
                 'category_id' => 'required',
                 'description' => 'required',
+                'stock' => 'required',
                 'weight' => 'required|numeric',
                 'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             ]);
@@ -99,6 +102,7 @@ class ProductController extends Controller
                 'price' => $request->price,
                 'category_id' => $request->category_id,
                 'description' => $request->description,
+                'stock' => $request->stock,
                 'weight' => $request->weight,
                 'image' => isset($imageName) ? $imageName : $product->image,
             ]);

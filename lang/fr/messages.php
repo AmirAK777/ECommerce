@@ -18,6 +18,7 @@ return [
     "category" => "Catégorie",
     "action" => "Action",
     "description" => "Description",
+    "stock" => "Stock",
     "weight" => "Poids",
     "image" => "Image",
     "create" => "Créer",
