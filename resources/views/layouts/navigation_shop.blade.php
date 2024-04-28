@@ -266,16 +266,7 @@
                                                 </button>
                                             </div>
 
-                                            <!--
-                      'Women' flyout menu, show/hide based on flyout menu state.
 
-                      Entering: "transition ease-out duration-200"
-                        From: "opacity-0"
-                        To: "opacity-100"
-                      Leaving: "transition ease-in duration-150"
-                        From: "opacity-100"
-                        To: "opacity-0"
-                    -->
                                             <div x-show="firstIsOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="absolute top-full inset-x-0 text-sm text-gray-500">
                                                 <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
                                                 <div class="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true"></div>
@@ -474,9 +465,11 @@
             </div>
         </nav>
     </header>
+    @if(Route::is('shop.index'))
     <div class="relative mx-auto flex max-w-3xl flex-col items-center py-32 px-6 text-center sm:py-64 lg:px-0">
         <h1 class="text-4xl font-bold tracking-tight text-white lg:text-6xl">New arrivals are here</h1>
         <p class="mt-4 text-xl text-white">The new arrivals have, well, newly arrived. Check out the latest options from our summer small-batch release while they're still in stock.</p>
         <a href="#" class="mt-8 inline-block rounded-md border border-transparent bg-white py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100">Shop New Arrivals</a>
     </div>
+    @endif
 </div>

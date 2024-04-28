@@ -69,7 +69,5 @@ Route::get('/cart/remove/{id}', [ShopController::class, 'remove'])->name('cart.r
 
 Route::get('/search', [SearchController::class, 'search'])->name('search');
 
-Route::get('/ma-vue', function () {
-    return view('layouts.shop');
-});
+
 require __DIR__ . '/auth.php';
